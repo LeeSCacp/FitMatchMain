@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- 1) 상단 타이틀 + 상세보기 -->
+    <TextView
+        android:id="@+id/tv_match_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="4주 매일 헬스 매치 1일차"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_detail"/>
+
+    <Button
+        android:id="@+id/btn_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="상세보기"
+        app:layout_constraintTop_toTopOf="@id/tv_match_title"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 2) "운동 시작" 버튼 (항상 화면 맨 아래 네비 위에) -->
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="운동 시작"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 3) '내 운동 현황' 레이블부터 '응원 메시지'까지 묶어서
+           타이틀 아래 ↔ 운동시작 버튼 위 영역의 30% 지점에 붙임 -->
+    <TextView
+        android:id="@+id/tv_my_status_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="000님(나)의 운동 현황"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_match_title"
+        app:layout_constraintBottom_toTopOf="@id/btn_start"
+        app:layout_constraintVertical_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/progress_my"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:scaleY="10"
+        android:max="100"
+        android:progress="65"
+        android:progressTint="@color/progress_green"
+        app:layout_constraintTop_toBottomOf="@id/tv_my_status_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:id="@+id/tv_my_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="65%"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="@id/progress_my"
+        app:layout_constraintEnd_toEndOf="@id/progress_my"
+        app:layout_constraintTop_toTopOf="@id/progress_my"
+        app:layout_constraintBottom_toBottomOf="@id/progress_my"/>
+
+    <TextView
+        android:id="@+id/tv_other_status_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="000님(상대방)의 운동 현황"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/progress_my"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <ProgressBar
+        android:id="@+id/progress_other"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:scaleY="10"
+        android:max="100"
+        android:progress="45"
+        android:progressTint="@color/progress_yellow"
+        app:layout_constraintTop_toBottomOf="@id/tv_other_status_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:id="@+id/tv_other_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="45%"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="@id/progress_other"
+        app:layout_constraintEnd_toEndOf="@id/progress_other"
+        app:layout_constraintTop_toTopOf="@id/progress_other"
+        app:layout_constraintBottom_toBottomOf="@id/progress_other"/>
+
+    <TextView
+        android:id="@+id/tv_match_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="잘 하고 있어요!"
+        android:textSize="16sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/progress_other"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

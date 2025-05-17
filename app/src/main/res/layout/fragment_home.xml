@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 안내문: 화면 중앙(중앙(0.5) → 위로(0.45)) -->
+    <TextView
+        android:id="@+id/tv_no_match"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="매칭된 운동이 없어요\n매칭을 시작해보세요"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.45"/>
+
+    <!-- 운동 매칭 버튼:
+         Top → TextView 아래,
+         Bottom → 부모 바닥(네비바 바로 위) 사이의 중간(기본 bias=0.5) -->
+    <Button
+        android:id="@+id/btn_match"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="운동 매칭"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_no_match"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

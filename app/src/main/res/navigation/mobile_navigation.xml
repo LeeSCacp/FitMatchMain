@@ -20,25 +20,32 @@
 
     </fragment>
 
-    <!-- 2) 기존 대시보드, 노티피케이션 프래그먼트들 -->
+    <!-- 1) 운동 탭: ExerciseSettingFragment 연결 -->
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.example.fitmatchmain.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
+        android:id="@+id/navigation_exercise"
+        android:name="com.example.fitmatchmain.ui.exercise.ExerciseSettingFragment"
+        android:label="@string/title_exercise"
+        tools:layout="@layout/fragment_exercise_setting" >
 
+        <!-- ExerciseSettingFragment → ExerciseMatchFragment 액션 -->
+        <action
+            android:id="@+id/action_exercise_to_match"
+            app:destination="@id/exerciseMatchFragment" />
+    </fragment>
+
+    <!-- 새로 추가할 매칭 Fragment -->
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.example.fitmatchmain.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/exerciseMatchFragment"
+        android:name="com.example.fitmatchmain.ui.exercise.ExerciseMatchFragment"
+        android:label="매칭"
+        tools:layout="@layout/fragment_exercise_match" />
 
-    <!-- 3) 매칭 화면용 MatchFragment 정의 -->
+    <!-- 3) 매칭완료 후 홈 화면용 MatchFragment 정의 -->
     <fragment
         android:id="@+id/matchFragment"
         android:name="com.example.fitmatchmain.ui.match.MatchFragment"
         android:label="Match"
-        tools:layout="@layout/fragment_match" />
+        tools:layout="@layout/fragment_match_status" />
 
     <!-- 4) SettingFragment 추가 -->
     <fragment

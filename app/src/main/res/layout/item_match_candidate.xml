@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 1) 파트너 닉네임 -->
+        <TextView
+            android:id="@+id/tvCandidateName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="닉네임"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+        <!-- 2) 루틴 제목 -->
+        <TextView
+            android:id="@+id/tvRoutineTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="가슴/등/하체 3분할 루틴"
+            android:layout_marginTop="4dp"
+            android:textSize="14sp"/>
+
+        <!-- 3) 루틴 요약(레벨 등) -->
+        <TextView
+            android:id="@+id/tvRoutineSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="초보자"
+            android:layout_marginTop="2dp"
+            android:textSize="12sp"/>
+
+        <!-- 4) 루틴 기간 -->
+        <TextView
+            android:id="@+id/tvRoutineDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2025-04-14 - 2025-05-12"
+            android:layout_marginTop="2dp"
+            android:textSize="12sp"/>
+
+        <!-- 5) 신청 버튼 & 카운트 영역 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btnApply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="신청"/>
+
+            <TextView
+                android:id="@+id/tvApplyCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_marginStart="8dp"
+                android:drawableStart="@drawable/ic_download"
+                android:drawablePadding="4dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

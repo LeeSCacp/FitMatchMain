@@ -20,18 +20,4 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias="0.45"/>
 
-    <!-- 운동 매칭 버튼:
-         Top → TextView 아래,
-         Bottom → 부모 바닥(네비바 바로 위) 사이의 중간(기본 bias=0.5) -->
-    <Button
-        android:id="@+id/btn_match"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="운동 매칭"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_no_match"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintVertical_bias="0.5" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

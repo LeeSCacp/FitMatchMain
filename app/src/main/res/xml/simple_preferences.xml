@@ -1,14 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- 예: 푸시 알림 토글 -->
-    <SwitchPreferenceCompat
-        android:key="pref_push"
-        android:title="푸시 알림"
-        android:summary="앱 푸시 알림 수신 여부"
-        android:defaultValue="true" />
+    <!-- 기본 설정 그룹 -->
+    <PreferenceCategory
+        android:key="cat_simple"
+        android:title="기본 설정">
 
-    <!-- 상세 설정 화면으로 이동하는 항목 -->
+        <!-- 푸시 알림 -->
+        <SwitchPreferenceCompat
+            android:key="pref_push"
+            android:title="푸시 알림"
+            android:summary="앱 푸시 알림 수신 여부"
+            android:defaultValue="true" />
+
+        <!-- 파트너 활동 알림 -->
+        <SwitchPreferenceCompat
+            android:key="pref_notify_partner"
+            android:title="파트너 활동 알림"
+            android:summary="파트너의 신청/수락/완료 알림"
+            android:defaultValue="true" />
+
+        <!-- 일일 요약 알림 -->
+        <SwitchPreferenceCompat
+            android:key="pref_notify_daily"
+            android:title="일일 요약 알림"
+            android:summary="오늘의 목표 달성 여부 요약 알림"
+            android:defaultValue="false" />
+
+        <!-- 테마 선택 -->
+        <ListPreference
+            android:key="pref_theme"
+            android:title="테마"
+            android:entries="@array/theme_entries"
+            android:entryValues="@array/theme_values"
+            android:defaultValue="light"
+            android:summary="%s" />
+
+        <!-- 글꼴 크기 -->
+        <ListPreference
+            android:key="pref_font_size"
+            android:title="글꼴 크기"
+            android:entries="@array/font_size_entries"
+            android:entryValues="@array/font_size_values"
+            android:defaultValue="medium"
+            android:summary="%s" />
+
+        <!-- 언어 선택 -->
+        <ListPreference
+            android:key="pref_language"
+            android:title="언어"
+            android:entries="@array/lang_entries"
+            android:entryValues="@array/lang_values"
+            android:defaultValue="ko"
+            android:summary="%s" />
+
+        <!-- 거리 단위 -->
+        <ListPreference
+            android:key="pref_unit_distance"
+            android:title="거리 단위"
+            android:entries="@array/unit_distance_entries"
+            android:entryValues="@array/unit_distance_values"
+            android:defaultValue="km"
+            android:summary="%s" />
+
+        <!-- 무게 단위 -->
+        <ListPreference
+            android:key="pref_unit_weight"
+            android:title="무게 단위"
+            android:entries="@array/unit_weight_entries"
+            android:entryValues="@array/unit_weight_values"
+            android:defaultValue="kg"
+            android:summary="%s" />
+
+        <!-- 프로필 공개 범위 -->
+        <ListPreference
+            android:key="pref_profile_visibility"
+            android:title="프로필 공개 범위"
+            android:entries="@array/visibility_entries"
+            android:entryValues="@array/visibility_values"
+            android:defaultValue="friends"
+            android:summary="%s" />
+
+        <!-- 위치 정보 공유 -->
+        <SwitchPreferenceCompat
+            android:key="pref_share_location"
+            android:title="위치 정보 공유"
+            android:summary="매칭 시 대략 위치만 공유"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <!-- 고급 설정으로 이동 -->
     <Preference
         android:key="pref_advanced"
         android:title="고급 설정"

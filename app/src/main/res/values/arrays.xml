@@ -4,4 +4,82 @@
         <item>거리순</item>
         <item>인기순</item>
     </string-array>
+
+    <!-- 테마 -->
+    <string-array name="theme_entries">
+        <item>라이트</item>
+        <item>다크</item>
+    </string-array>
+    <string-array name="theme_values">
+        <item>light</item>
+        <item>dark</item>
+    </string-array>
+
+    <!-- 글꼴 크기 -->
+    <string-array name="font_size_entries">
+        <item>작게</item>
+        <item>보통</item>
+        <item>크게</item>
+    </string-array>
+    <string-array name="font_size_values">
+        <item>small</item>
+        <item>medium</item>
+        <item>large</item>
+    </string-array>
+
+    <!-- 언어 선택 -->
+    <string-array name="lang_entries">
+        <item>한국어</item>
+        <item>English</item>
+    </string-array>
+    <string-array name="lang_values">
+        <item>ko</item>
+        <item>en</item>
+    </string-array>
+
+    <!-- 거리 단위 -->
+    <string-array name="unit_distance_entries">
+        <item>km</item>
+        <item>mile</item>
+    </string-array>
+    <string-array name="unit_distance_values">
+        <item>km</item>
+        <item>mile</item>
+    </string-array>
+
+    <!-- 무게 단위 -->
+    <string-array name="unit_weight_entries">
+        <item>kg</item>
+        <item>lb</item>
+    </string-array>
+    <string-array name="unit_weight_values">
+        <item>kg</item>
+        <item>lb</item>
+    </string-array>
+
+    <!-- 프로필 공개 범위 -->
+    <string-array name="visibility_entries">
+        <item>전체 공개</item>
+        <item>친구만</item>
+        <item>비공개</item>
+    </string-array>
+    <string-array name="visibility_values">
+        <item>public</item>
+        <item>friends</item>
+        <item>private</item>
+    </string-array>
+
+    <!-- 센서 동기화 주기 -->
+    <string-array name="sensor_sync_entries">
+        <item>5</item>
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+    </string-array>
+    <string-array name="sensor_sync_values">
+        <item>5</item>
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+    </string-array>
 </resources>

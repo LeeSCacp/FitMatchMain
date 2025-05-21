@@ -36,7 +36,7 @@ class ExerciseSettingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // 1) 기간 선택 다이얼로그
+        // 날짜 범위 선택
         binding.etPeriod.setOnClickListener {
             val picker = MaterialDatePicker.Builder.dateRangePicker()
                 .setTitleText("운동 기간 선택")
@@ -50,14 +50,13 @@ class ExerciseSettingFragment : Fragment() {
             }
         }
 
-        // 2) 운동 계획 등록 버튼
+        // 사용자가 입력한 값만 저장
         binding.btnRegisterPlan.setOnClickListener {
             val typeText = binding.etExerciseType.text.toString().trim()
             val periodText = binding.etPeriod.text.toString().trim()
             val freqText = binding.etFrequency.text.toString().trim()
             val freq = freqText.toIntOrNull() ?: 0
 
-            // 입력값 검증
             if (typeText.isEmpty() || periodText.isEmpty() || freqText.isEmpty()) {
                 Toast.makeText(
                     requireContext(),
@@ -67,7 +66,7 @@ class ExerciseSettingFragment : Fragment() {
                 return@setOnClickListener
             }
 
-            // 3) SharedPreferences에 저장
+            // 여기에서만 SharedPreferences 에 저장
             requireContext()
                 .getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
                 .edit()
@@ -76,7 +75,7 @@ class ExerciseSettingFragment : Fragment() {
                 .putInt(KEY_FREQ, freq)
                 .apply()
 
-            // 4) 매칭 화면으로 이동
+            // 저장 후에만 매칭 화면으로 진행
             findNavController().navigate(R.id.action_exercise_to_match)
         }
     }

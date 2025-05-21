@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 예: 푸시 알림 토글 -->
+    <SwitchPreferenceCompat
+        android:key="pref_push"
+        android:title="푸시 알림"
+        android:summary="앱 푸시 알림 수신 여부"
+        android:defaultValue="true" />
+
+    <!-- 상세 설정 화면으로 이동하는 항목 -->
+    <Preference
+        android:key="pref_advanced"
+        android:title="고급 설정"
+        android:summary="더 많은 설정 보기" />
+</PreferenceScreen>

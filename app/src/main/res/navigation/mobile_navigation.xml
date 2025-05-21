@@ -17,6 +17,7 @@
         <action
             android:id="@+id/action_home_to_match"
             app:destination="@id/matchFragment" />
+
     </fragment>
 
     <!-- 2) 기존 대시보드, 노티피케이션 프래그먼트들 -->
@@ -38,4 +39,12 @@
         android:name="com.example.fitmatchmain.ui.match.MatchFragment"
         android:label="Match"
         tools:layout="@layout/fragment_match" />
+
+    <!-- 4) SettingFragment 추가 -->
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.example.fitmatchmain.ui.setting.SimpleSettingFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_setting" />
+
 </navigation>
